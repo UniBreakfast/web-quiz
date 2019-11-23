@@ -4,7 +4,10 @@ export const
 
   globalize = obj => assign(window, obj),
 
-  jsonClone = data => JSON.parse(JSON.stringify(data))
+  jsonClone = obj => JSON.parse(JSON.stringify(obj)),
+
+  d = document,
+  credom = (el,...props) => assign(d.createElement(el),...props)
 
 
 Array.prototype.shuffle = function () {
